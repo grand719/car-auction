@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+li a {
+    display: block;
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #ff0055;
+    border-radius: 4px;
+    background: #ff0055;
+    color: white;
+    cursor: pointer;
+    margin-right: 1rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+li a:hover,
+li a:active {
+  background: #ff4382;
+  border-color: #ff4382;
+}
+
+.add-car-post {
+    margin: 15px auto;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
