@@ -72,12 +72,7 @@ const AddCarPost: VFC = () => {
       formData.append("image", formState.inputs.image.value);
       formData.append("price", formState.inputs.minPrice.value);
 
-      await sendRequest(
-        "http://localhost:5000/api/posts",
-        "POST",
-        formData,
-        {}
-      );
+      await sendRequest("/api/posts", "POST", formData, {});
       navigate("/");
     } catch (e: any) {
       console.log(e);

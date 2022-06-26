@@ -65,7 +65,7 @@ const CarPost: React.VFC<CarPostType> = ({
     event.preventDefault();
     try {
       await sendRequest(
-        `http://localhost:5000/api/posts/${id}`,
+        `/api/posts/${id}`,
         "POST",
         JSON.stringify({
           name: formState.inputs.name.value,
@@ -86,7 +86,7 @@ const CarPost: React.VFC<CarPostType> = ({
     event.preventDefault();
     try {
       // @ts-ignore
-      await sendRequest(`http://localhost:5000/api/posts/${id}`, "delete");
+      await sendRequest(`/api/posts/${id}`, "delete");
       navigate(0);
     } catch (e: any) {
       console.log(e);

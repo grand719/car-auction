@@ -37,10 +37,7 @@ const UserDetailsPage = () => {
     const fetchPosts = async () => {
       try {
         // @ts-ignore
-        const response = await sendRequest(
-          `http://localhost:5000/api/posts/user/${pesel}`,
-          "GET"
-        );
+        const response = await sendRequest(`/api/posts/user/${pesel}`, "GET");
         // @ts-ignore
         setPosts(response.posts);
         // @ts-ignore

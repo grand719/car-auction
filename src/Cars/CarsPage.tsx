@@ -10,10 +10,7 @@ const CarsPage = () => {
     const fetchUserPlaces = async () => {
       try {
         // @ts-ignore
-        const response = await sendRequest(
-          `http://localhost:5000/api/posts`,
-          "GET"
-        );
+        const response = await sendRequest(`/api/posts`, "GET");
         // @ts-ignore
         setPosts(response.post);
         console.log(response);
@@ -44,7 +41,7 @@ const CarsPage = () => {
             description={post.description}
             minPrice={post.price}
             vin={post.vin}
-            image={"http://localhost:5000/" + post.image}
+            image={"/" + post.image}
             telNumber={post.telephoneNumber}
             endDate={post.date}
             bids={post.bids}
